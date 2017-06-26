@@ -1,6 +1,8 @@
 package org.bhoopendra.learning.hackerrank.algo;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.bhoopendra.learning.generics.beans.Animal;
 
@@ -12,6 +14,9 @@ public class Reflection {
 		for(Method method : allmethods){
 			System.out.println(method.getName());
 		}
+		Map<String, String> listOfEmployee = new HashMap<>();
+		listOfEmployee.put("emp1", "8860634724");
+		System.out.println(listOfEmployee.get("emp12"));
 	}
 
 }
