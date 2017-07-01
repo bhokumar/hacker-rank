@@ -3,8 +3,8 @@ package org.bhoopendra.learning.algos;
 public class InsertionSort {
 
 	public static void main(String[] args) {
-		int arr[] = {10,2,3,6,8,9};
-		new InsertionSort().insertionSort(arr, 6);
+		int arr[] = {2,4,3,1,2,9,45};
+		new InsertionSort().insertionSort(arr, 7);
 		for(int item:arr){
 			System.out.println(item);
 		}
