@@ -3,7 +3,6 @@ package org.bhoopendra.learning.inheritance;
 public class InharitanceClient {
 
 	public static void main(String[] args) {
-		Parent parent = new Child();
 		Parent.show();
 		Child.show();
 	}
