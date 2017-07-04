@@ -1,14 +1,11 @@
 package org.bhoopendra.learning.collection;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class CollectionClient {
 
 	public static void main(String[] args) {
-		Collection<?> collections[] = {new HashSet<>(),};
+		Collection<?> collections[] = {new HashSet<>(),new LinkedList<>()};
 		new CollectionClient().classifyCollection(collections);
 	}
 	
