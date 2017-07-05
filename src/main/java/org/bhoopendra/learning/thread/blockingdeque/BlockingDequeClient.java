@@ -4,7 +4,7 @@ import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.LinkedBlockingDeque;
 
 public class BlockingDequeClient {
-
+	private BlockingDequeClient(){}
 	public static void main(String[] args) {
 		BlockingDeque<Integer> blockingDeque = new LinkedBlockingDeque<>();
 		new Thread(new Producer(blockingDeque)).start();
