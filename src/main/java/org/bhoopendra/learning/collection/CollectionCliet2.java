@@ -19,7 +19,7 @@ public class CollectionCliet2 {
 		}
 		
 		for(int i=0;i<3;i++){
-			inetgers.remove(i);
+			inetgers.remove((Integer)i);
 		}
 		
 		System.out.println("After removal");
