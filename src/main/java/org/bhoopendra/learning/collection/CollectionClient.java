@@ -7,7 +7,7 @@ import java.util.concurrent.BlockingQueue;
 public class CollectionClient {
 
 	public static void main(String[] args) {
-		Collection<?> collections[] = {new HashSet<>(),new LinkedList<>(),new TreeSet<>(),new LinkedHashSet<>(),new ArrayList<>(),new LinkedList<>()};
+		Collection<?> collections[] = {new HashSet<>(),new LinkedList<>(),new TreeSet<>(),new LinkedHashSet<>(),new ArrayList<>(),new LinkedList<>(),new ArrayBlockingQueue<>(2)};
 		new CollectionClient().classifyCollection(collections);
 	}
 	
