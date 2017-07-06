@@ -5,6 +5,5 @@ package org.bhoopendra.learning.stream;
  */
 public class StreamClient {
     public static void main(String[] args) {
-
     }
 }
