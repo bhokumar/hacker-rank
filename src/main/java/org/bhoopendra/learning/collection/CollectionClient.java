@@ -1,11 +1,13 @@
 package org.bhoopendra.learning.collection;
 
 import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
 public class CollectionClient {
 
 	public static void main(String[] args) {
-		Collection<?> collections[] = {new HashSet<>(),new LinkedList<>()};
+		Collection<?> collections[] = {new HashSet<>(),new LinkedList<>(),new TreeSet<>(),new LinkedHashSet<>(),new ArrayList<>(),new LinkedList<>()};
 		new CollectionClient().classifyCollection(collections);
 	}
 	
