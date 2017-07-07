@@ -8,8 +8,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class RangeRequestClient {
     public static void main(String[] args) {
-        final String range1 = "range1";
-        final String range2 = "range2";
+        //final String range1 = "range1";
+        //final String range2 = "range2";
 
         final Lock lock1 = new ReentrantLock();
         final Lock lock2 = new ReentrantLock();

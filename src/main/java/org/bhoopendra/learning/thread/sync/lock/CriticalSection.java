@@ -1,5 +1,6 @@
 package org.bhoopendra.learning.thread.sync.lock;
 
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.locks.Lock;
 
 /**
@@ -14,9 +15,9 @@ public class CriticalSection {
 
     public void alloacate(final String userName) throws InterruptedException {
         lock.lock();
-        System.out.println(userName+" is doing allocation");
+        System.out.println("Request thread name "+ Thread.currentThread().getName()+" "+userName + " is doing allocation");
         Thread.sleep(10000);
-        System.out.println(userName+" has done its allocation");
+        System.out.println("Request thread name "+ Thread.currentThread().getName()+" "+userName + " has done its allocation");
         lock.unlock();
     }
 }
