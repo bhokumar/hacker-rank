@@ -3,6 +3,7 @@ package org.bhoopendra.learning.collection;
 import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class CollectionClient {
 
@@ -18,6 +19,7 @@ public class CollectionClient {
 	}
 
 	private String getCollectionType(final Collection<?> c){
+		//ConcurrentHashMap
 		return c instanceof List ? "List":c instanceof Set? "Set" :"Unknown Type";
 	}
 }
