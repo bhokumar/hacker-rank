@@ -1,9 +1,35 @@
 package org.bhoopendra.learning.stream;
 
+import org.w3c.dom.Element;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
+
 /**
  * Created by bhokumar on 7/4/2017.
  */
 public class StreamClient {
     public static void main(String[] args) {
+        List<Employee> elements = new ArrayList<>();
+        elements.add(new Employee("emp1",22,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp16",23,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp15",24,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp14",25,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp13",26,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp12",21,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp11",29,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp10",35,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp9",36,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp8",39,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp7",45,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp6",24,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp5",78,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp4",17,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp3",32,new Address("noida","Uttar Pradesh",243601)));
+        elements.add(new Employee("emp2",27,new Address("noida","Uttar Pradesh",243601)));
+        /*elements.forEach((t)->{
+            System.out.println(t.getName());
+        });*/
     }
 }
