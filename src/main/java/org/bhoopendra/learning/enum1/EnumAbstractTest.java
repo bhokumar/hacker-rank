@@ -36,6 +36,6 @@ public enum EnumAbstractTest {
 
 class Client{
     public static void main(String[] args) {
-        EnumAbstractTest.FIRST.calculateTest();
+        System.out.println(EnumAbstractTest.FIRST.ordinal());
     }
 }
