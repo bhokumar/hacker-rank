@@ -4,7 +4,7 @@ package org.bhoopendra.learning.enum1;
  * Created by bhokumar on 7/11/2017.
  */
 public enum EnumAbstractTest {
-    FIRST {
+    FIRST(1) {
         int i=100;
         void test(){
             System.out.println(i);
@@ -14,17 +14,22 @@ public enum EnumAbstractTest {
             test();
             System.out.println("first");
         }
-    },SECOND {
+    },SECOND(2) {
         @Override
         void calculateTest() {
-
+            System.out.println();
         }
-    },THIRD {
+    },THIRD(4) {
         @Override
         void calculateTest() {
 
         }
     };
+
+    private EnumAbstractTest(final int i) {
+        System.out.println(i);
+    }
+
     abstract void calculateTest();
 }
 
