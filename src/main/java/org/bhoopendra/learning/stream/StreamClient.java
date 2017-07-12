@@ -28,8 +28,6 @@ public class StreamClient {
         elements.add(new Employee("emp4",17,new Address("noida","Uttar Pradesh",243601)));
         elements.add(new Employee("emp3",32,new Address("noida","Uttar Pradesh",243601)));
         elements.add(new Employee("emp2",27,new Address("noida","Uttar Pradesh",243601)));
-        /*elements.forEach((t)->{
-            System.out.println(t.getName());
-        });*/
+        elements.stream().
     }
 }
