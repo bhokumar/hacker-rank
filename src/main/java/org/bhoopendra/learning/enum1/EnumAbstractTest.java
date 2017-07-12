@@ -37,5 +37,10 @@ public enum EnumAbstractTest {
 class Client{
     public static void main(String[] args) {
         System.out.println(EnumAbstractTest.FIRST.ordinal());
+        System.out.println(EnumAbstractTest.SECOND.ordinal());
+        EnumAbstractTest[] enumAbstractTests = EnumAbstractTest.values();
+        for (EnumAbstractTest enumAbstractTest : enumAbstractTests){
+            System.out.println(enumAbstractTest.ordinal());
+        }
     }
 }
