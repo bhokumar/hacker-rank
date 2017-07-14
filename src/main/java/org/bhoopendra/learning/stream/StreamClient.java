@@ -5,6 +5,7 @@ import org.w3c.dom.Element;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * Created by bhokumar on 7/4/2017.
@@ -30,5 +31,8 @@ public class StreamClient {
         elements.add(new Employee("emp2",27,new Address("noida","Uttar Pradesh",243601)));
         elements.stream().filter(t->t.getAge()%2==0).map(t->t.getAge()).reduce(0,(c,e)->(c+e));
         System.out.println(elements.stream().filter(t->t.getAge()%2==0).map(t->t.getAge()).reduce(0,(c,e)->(c+e)));
+        System.out.println(elements.stream().filter(t->t.getAge()%2==1).map(t->t.getAge()).reduce(0,(c,e)->(c+e)));
+        List<Integer> agesList = elements.stream().map(t->t.getAge()).collect(Collectors.toList());
+        
     }
 }
