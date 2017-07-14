@@ -28,6 +28,7 @@ public class StreamClient {
         elements.add(new Employee("emp4",17,new Address("noida","Uttar Pradesh",243601)));
         elements.add(new Employee("emp3",32,new Address("noida","Uttar Pradesh",243601)));
         elements.add(new Employee("emp2",27,new Address("noida","Uttar Pradesh",243601)));
-        elements.stream().
+        elements.stream().filter(t->t.getAge()%2==0).map(t->t.getAge()).reduce(0,(c,e)->(c+e));
+        System.out.println(elements.stream().filter(t->t.getAge()%2==0).map(t->t.getAge()).reduce(0,(c,e)->(c+e)));
     }
 }
