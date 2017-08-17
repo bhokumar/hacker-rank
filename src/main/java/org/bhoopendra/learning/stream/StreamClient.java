@@ -1,10 +1,7 @@
 package org.bhoopendra.learning.stream;
 
-import org.w3c.dom.Element;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -33,6 +30,7 @@ public class StreamClient {
         System.out.println(elements.stream().filter(t->t.getAge()%2==0).map(t->t.getAge()).reduce(0,(c,e)->(c+e)));
         System.out.println(elements.stream().filter(t->t.getAge()%2==1).map(t->t.getAge()).reduce(0,(c,e)->(c+e)));
         List<Integer> agesList = elements.stream().map(t->t.getAge()).collect(Collectors.toList());
+        agesList.forEach(System.out::println);
 
     }
 }

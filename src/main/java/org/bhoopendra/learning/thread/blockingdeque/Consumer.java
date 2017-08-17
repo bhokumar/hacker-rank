@@ -1,7 +1,6 @@
 package org.bhoopendra.learning.thread.blockingdeque;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.BlockingDeque;
 
 public class Consumer implements Runnable{

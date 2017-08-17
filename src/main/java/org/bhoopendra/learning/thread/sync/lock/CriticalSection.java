@@ -1,6 +1,5 @@
 package org.bhoopendra.learning.thread.sync.lock;
 
-import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.locks.Lock;
 
 /**
