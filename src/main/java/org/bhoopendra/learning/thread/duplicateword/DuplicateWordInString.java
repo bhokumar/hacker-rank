@@ -19,7 +19,7 @@ public class DuplicateWordInString {
 		}
 		
 		for(Entry<Character, Integer> entry: tmp.entrySet()){
-			System.out.println(entry.getKey()+""+entry.getValue());
+			System.out.print(entry.getKey()+""+entry.getValue());
 		}
 	}
 
