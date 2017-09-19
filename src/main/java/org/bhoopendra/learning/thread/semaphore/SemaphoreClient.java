@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 public class SemaphoreClient {
 
 	public static void main(String[] args) {
-		Semaphore semaphore = new Semaphore(1);
+		Semaphore semaphore = new Semaphore(2);
 		SemaphoreRunnable semaphoreRunnable1 = new SemaphoreRunnable(semaphore);
 		SemaphoreRunnable semaphoreRunnable2 = new SemaphoreRunnable(semaphore);
 		new Thread(semaphoreRunnable1,"thread1").start();
