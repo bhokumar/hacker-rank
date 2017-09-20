@@ -4,7 +4,6 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class ConcurrentStack<E> {
     private AtomicReference<Node<E>> top = new AtomicReference<>();
-
     public void push(final E item){
         final Node<E> newHead = new Node<>(item);
         Node<E> oldHead;
@@ -14,7 +13,7 @@ public class ConcurrentStack<E> {
         }while (!top.compareAndSet(oldHead,newHead));
     }
     public E pop(){
-        Node<E> oldHead;;
+        Node<E> oldHead;
         Node<E> newHead;
         do{
             oldHead = top.get();
@@ -26,9 +25,8 @@ public class ConcurrentStack<E> {
     }
 
     private static class Node<E>{
-        public E item;
-        public Node<E> next;
-
+        private E item;
+        private Node<E> next;
         public Node(E item) {
             this.item = item;
         }
