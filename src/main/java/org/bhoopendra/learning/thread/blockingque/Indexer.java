@@ -11,19 +11,18 @@ public class Indexer implements Runnable {
     }
 
 
-
     @Override
     public void run() {
         try {
             while (true) {
                 indexFile(fileQueue.take());
             }
-        }catch (final InterruptedException e){
+        } catch (final InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    private void indexFile(final File indexedFile){
-        System.out.println(indexedFile.getAbsolutePath()+indexedFile.getName()+"has been indexed");
+    private void indexFile(final File indexedFile) {
+        System.out.println(indexedFile.getAbsolutePath() + indexedFile.getName() + "has been indexed");
     }
 }

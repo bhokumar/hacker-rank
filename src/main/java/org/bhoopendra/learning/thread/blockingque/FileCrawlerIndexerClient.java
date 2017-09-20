@@ -1,10 +1,7 @@
 package org.bhoopendra.learning.thread.blockingque;
 
 import java.io.File;
-import java.io.FileFilter;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 

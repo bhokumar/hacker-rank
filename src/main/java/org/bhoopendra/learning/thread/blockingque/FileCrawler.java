@@ -36,7 +36,7 @@ public class FileCrawler implements Runnable {
     public void run() {
         try {
             crawl(root);
-        }catch (final InterruptedException e){
+        } catch (final InterruptedException e) {
             e.printStackTrace();
         }
     }
