@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class NullPointer {
+public class NullPointerTest {
     public static void main(String[] args) {
         final Map<String, String> hashMap = new HashMap<>();
         hashMap.put(null, "first");
