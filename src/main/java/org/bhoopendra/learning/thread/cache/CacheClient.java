@@ -9,5 +9,10 @@ public class CacheClient {
         System.out.println(resultCalculater.compute("67429848"));
         System.out.println(resultCalculater.compute("67429848"));
         System.out.println(resultCalculater.compute("67429849"));
+
+        Memorizer2<String,BigInteger> memorizer = new Memorizer2<>(expensiveFunction);
+        System.out.println(memorizer.compute("67429848"));
+        System.out.println(memorizer.compute("67429848"));
+        System.out.println(memorizer.compute("67429849"));
     }
 }
