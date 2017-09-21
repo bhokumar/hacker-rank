@@ -8,7 +8,6 @@ public class FutureClient {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         final Callable<String> worker = () -> {
-            Thread.sleep(10000);
             return "hello";
         };
         ExecutorService executorService = Executors.newFixedThreadPool(2);
@@ -22,6 +21,19 @@ public class FutureClient {
         System.out.println("################### After worker execution done ######################");
         System.out.println("isDone status : "+result.isDone());
         System.out.println("cancled status : "+result.isCancelled());
+
+
+        final Runnable runnable = ()-> {
+            System.out.println("Runnable executed");
+            try{
+            Thread.sleep(10000);
+            }catch (final InterruptedException e){
+                Thread.currentThread().interrupt();
+            }
+        };
+
+         Future<?> future = executorService.submit(runnable);
+        System.out.println(future);
         executorService.shutdown();
         System.out.println("shutdown is called on service!");
     }
