@@ -2,8 +2,10 @@ package org.bhoopendra.learning.thread.cache;
 
 import java.util.Map;
 import java.util.concurrent.*;
+import java.util.logging.Logger;
 
 public class Memorizer4<A, V> implements Computable<A, V> {
+    private static final Logger LOGGER = Logger.getLogger(Memorizer4.class.getName());
     private final Map<A, Future<V>> cache = new ConcurrentHashMap<>();
     private Computable<A, V> computer;
 
@@ -13,6 +15,7 @@ public class Memorizer4<A, V> implements Computable<A, V> {
 
     @Override
     public V compute(A arg) throws InterruptedException {
+        LOGGER.info("Result being calculated!");
         while (true) {
             Future<V> result = cache.get(arg);
             if (result == null) {
