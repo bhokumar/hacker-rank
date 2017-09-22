@@ -12,7 +12,7 @@ public class Memorizer<A, V> implements Computable<A, V> {
     }
 
     @Override
-    public synchronized V compute(final A arg) {
+    public synchronized V compute(final A arg)throws InterruptedException {
         V result = cache.get(arg);
         if (result == null) {
             System.out.println("Data in cache not found");
