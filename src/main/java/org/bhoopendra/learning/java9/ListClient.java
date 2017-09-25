@@ -55,7 +55,9 @@ public class ListClient {
                 .orElseThrow(IllegalStateException::new);
 
         List<String> listOfConf = Stream.of("app.config","app.home","user.home")
-                .flatMap(key->Stream.ofNullable(System.getProperty(key))).collect(Collectors.toList());
+                .flatMap(key->Stream.ofNullable(System.getProperty(key)))
+                .collect(Collectors.toList());
+        
         listOfConf.stream().forEach(System.out::println);
 
         System.out.println("Configured user directory : "+configuartionDirectory);
