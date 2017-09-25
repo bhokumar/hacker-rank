@@ -29,7 +29,10 @@ public class ListClient {
                 .collect(Collectors.toList());
         integers1.stream().forEach(System.out::println);
         System.out.println("###################### Use of Drop while ##############");
-        List<Integer> integers2 = list1.stream().dropWhile(i -> i % 2 == 1).collect(Collectors.toList());
+        List<Integer> integers2 = list1
+                .stream()
+                .dropWhile(i -> i % 2 == 1)
+                .collect(Collectors.toList());
 
 
         integers2.stream().forEach(System.out::println);
@@ -39,8 +42,22 @@ public class ListClient {
                 .forEach(System.out::println);
 
         System.out.println("###################### Use of take while ##############");
-        List<Integer> integers3 = list1.stream().takeWhile(i->i%2==0).collect(Collectors.toList());
-        integers3.stream().forEach(System.out::println);
+        List<Integer> integers3 = list1
+                .stream()
+                .takeWhile(i->i%2==0)
+                .collect(Collectors.toList());
+        integers3
+                .stream()
+                .forEach(System.out::println);
+        final String configuartionDirectory = Stream.of("app.config","app.home","user.home")
+                .flatMap(key->Stream.ofNullable(System.getProperty(key)))
+                .findFirst()
+                .orElseThrow(IllegalStateException::new);
 
+        List<String> listOfConf = Stream.of("app.config","app.home","user.home")
+                .flatMap(key->Stream.ofNullable(System.getProperty(key))).collect(Collectors.toList());
+        listOfConf.stream().forEach(System.out::println);
+
+        System.out.println("Configured user directory : "+configuartionDirectory);
     }
 }
