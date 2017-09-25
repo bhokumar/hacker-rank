@@ -61,5 +61,6 @@ public class ListClient {
         listOfConf.stream().forEach(System.out::println);
 
         System.out.println("Configured user directory : "+configuartionDirectory);
+
     }
 }

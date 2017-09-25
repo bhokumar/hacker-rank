@@ -1,5 +1,6 @@
 package org.bhoopendra.learning.util;
 
+import java.io.Flushable;
 import java.util.logging.Logger;
 
 public class ProcessorCounter {
