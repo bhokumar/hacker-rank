@@ -1,6 +1,7 @@
 package org.bhoopendra.learning.java9;
 
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,6 +29,14 @@ public class PersonHandler {
                 .filter(e -> Math.sqrt(e) > 20)
                 .mapToInt(e -> e * 2)
                 .limit(n)
+                .sum();
+    }
+
+    private static int sumOfAge(final List<Person> persons, final Predicate<Person> selector){
+        return persons.stream()
+                .filter(selector)
+                .map(p->p.getAge())
+                .mapToInt(e->e)
                 .sum();
     }
 }
