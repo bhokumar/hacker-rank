@@ -23,6 +23,8 @@ public class PersonHandler {
         //persons.stream().collect(Collectors.groupingBy(Person::getName),Collectors.toList())
     }
 
+
+
     private static int boundedSum(final int k, final int n) {
         return Stream.iterate(k, e -> e + 1)
                 .filter(e -> e % 2 == 0)
@@ -38,5 +40,17 @@ public class PersonHandler {
                 .map(p->p.getAge())
                 .mapToInt(e->e)
                 .sum();
+    }
+
+    private static int sumOfSqrtOfPrime(final int k,final int n){
+        return Stream.iterate(k,e-> e + 1)
+                .filter(PersonHandler::isPrime)
+                .mapToInt(e->e*2)
+                .limit(n)
+                .sum();
+    }
+
+    private static boolean isPrime(final int number){
+        return true;
     }
 }
