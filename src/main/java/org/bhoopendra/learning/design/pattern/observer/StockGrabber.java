@@ -20,8 +20,8 @@ public class StockGrabber implements Subject {
 
 	public void unregister(Observer deleteObserver) {
 		int indexObserver = observers.indexOf(deleteObserver);
-		System.out.println("Observer at index : " + indexObserver + " deleted");
 		observers.remove(deleteObserver);
+		System.out.println("Observer at index : " + indexObserver + " deleted");
 	}
 
 	public void notifyObserver() {
