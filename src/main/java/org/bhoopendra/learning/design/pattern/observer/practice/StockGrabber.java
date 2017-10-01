@@ -32,15 +32,12 @@ public class StockGrabber implements Subject {
         observers.stream().forEach(observer -> observer.update(companies));
     }
 
-    public void changePrices(final Map<String,Long> companiesWithUpdatedPrice){
+    public void changePrices(final Map<String, Long> companiesWithUpdatedPrice) {
         companiesWithUpdatedPrice
                 .entrySet()
-                .stream().
-                forEach(t->companies
-                        .stream()
-                        .filter(c->t.getKey()==c.getName())
-                        .findFirst()
-                        .ifPresent(c->c.setPrice(t.getValue())));
+                .stream().forEach(t -> companies.stream()
+                .filter(c -> t.getKey() == c.getName())
+                .findFirst().ifPresent(c -> c.setPrice(t.getValue())));
         notifyUpdate(companies);
     }
 }
