@@ -20,9 +20,7 @@ public class SerializedSingleton implements Serializable{
     }
 }
 
-
 class Serialization{
-
     public static void main(String[] args) throws IOException,ClassNotFoundException {
         SerializedSingleton serializedSingleton = SerializedSingleton.getInstance();
         SerializationUtils.serializeObject(serializedSingleton);
