@@ -2,6 +2,8 @@ package org.bhoopendra.learning.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+import java.util.Arrays;
 
 public class ReflectionClient {
     public static void main(String[] args) {
@@ -22,6 +24,13 @@ public class ReflectionClient {
         for (Method method : methods){
             System.out.print(method.getName()+"  ");
             System.out.println(method.getModifiers());
+
+            System.out.println("#################### Method Parameters ##################");
+            Parameter[] parameters = method.getParameters();
+                Arrays.stream(parameters).forEach(System.out::println);
+            System.out.println(Arrays.stream(parameters).count());
         }
+
+
     }
 }

@@ -15,15 +15,15 @@ public class InspectionObject extends Pare implements Serializable,Cloneable {
     public InspectionObject() {
     }
 
-    private void method1(){
+    private void method1(String a,int b){
         System.out.println("method1");
     }
 
-    private void method2(){
+    private void method2(long a){
         System.out.println("method1");
     }
 
-    private void method3(){
+    private void method3(int d){
         System.out.println("method1");
     }
 
