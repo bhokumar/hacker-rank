@@ -25,7 +25,8 @@ class Graph
     //Function to add an edge into the graph
     void addEdge(int v, int w)
     {
-        adj[v].add(w);  // Add w to v's list.
+        adj[v].add(w);
+        // Add w to v's list.
     }
 
     // A function used by DFS
