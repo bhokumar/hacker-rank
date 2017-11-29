@@ -1,5 +1,6 @@
 package org.bhoopendra.learning.java9;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -7,11 +8,11 @@ import java.util.stream.Stream;
 
 public class PersonHandler {
     public static void main(String[] args) {
-        List<Person> persons = List.of(new Person("bob", Gender.MALE, 46),
+        List<Person> persons = Arrays.asList(new Person("bob", Gender.MALE, 46),
                 new Person("bob", Gender.MALE, 47),
                 new Person("bob", Gender.MALE, 48),
                 new Person("bob", Gender.MALE, 49),
-                new Person("bob", Gender.MALE, 50),
+        new Person("bob", Gender.MALE, 50),
                 new Person("bob", Gender.MALE, 51),
                 new Person("bob", Gender.MALE, 52),
                 new Person("bob", Gender.MALE, 53),

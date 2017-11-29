@@ -1,12 +1,13 @@
 package org.bhoopendra.learning.design.pattern.observer.practice;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class ObserverClient {
     public static void main(String[] args) {
-        List<Company> companies = List.of(new Company("APPLE", 165), new Company("IBM", 102), new Company("GOOGLE", 1068));
+        List<Company> companies = Arrays.asList(new Company("APPLE", 165), new Company("IBM", 102), new Company("GOOGLE", 1068));
         final StockGrabber stockGrabber = new StockGrabber(companies);
         stockGrabber.register(new StockObserver("observer1"));
         stockGrabber.register(new StockObserver("observer2"));

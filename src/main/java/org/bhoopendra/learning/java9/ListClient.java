@@ -9,7 +9,7 @@ public class ListClient {
     private static final Logger LOGGER = Logger.getLogger(ListClient.class.getName());
 
     public static void main(String[] args) {
-        List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        /*List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         integers.stream().forEach(System.out::println);
         List<Integer> list1 = List.of(1, 2, 3, 4, 5, 6);
         List<Integer> list2 = List.of(7, 8, 9, 10, 11, 12);
@@ -61,6 +61,6 @@ public class ListClient {
         listOfConf.stream().forEach(System.out::println);
 
         System.out.println("Configured user directory : "+configuartionDirectory);
-
+*/
     }
 }
