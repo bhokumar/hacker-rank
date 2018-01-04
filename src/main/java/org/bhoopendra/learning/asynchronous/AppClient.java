@@ -9,6 +9,7 @@ public class AppClient {
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
        // final int sum = numbers.stream().parallel().mapToInt(AppClient::transform).sum();
         numbers.parallelStream().mapToInt(AppClient::transform).forEachOrdered(System.out::println);
+        numbers.parallelStream().mapToInt(AppClient::transform).findFirst();
         //System.out.println(sum);
     }
 
