@@ -30,6 +30,7 @@ public class StreamClient {
         System.out.println(elements.stream().filter(t->t.getAge()%2==0).map(t->t.getAge()).reduce(0,(c,e)->(c+e)));
         System.out.println(elements.stream().filter(t->t.getAge()%2==1).map(t->t.getAge()).reduce(0,(c,e)->(c+e)));
         List<Integer> agesList = elements.stream().map(t->t.getAge()).collect(Collectors.toList());
+        System.out.println("bhoopendra");
         agesList.forEach(System.out::println);
 
     }
