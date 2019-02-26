@@ -1,5 +1,8 @@
 package org.design.patterns.command;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CommandClient {
     public static void main(String[] args) {
         // In command design pattern client only Invokes command instead of doing things by itself
@@ -11,8 +14,13 @@ public class CommandClient {
         LightHandler kitchenlightHandler = new LightHandler();
         LightHandler halllightHandler = new LightHandler();
 
+        List<LightHandler> lightHandlers = new ArrayList<>();
+        lightHandlers.add(bedRommlightHandler);
+        lightHandlers.add(kitchenlightHandler);
+        lightHandlers.add(halllightHandler);
+
         // Object that is holding command but dont aware of what command it is
-        Command command = new ToggleCommand(bedRommlightHandler);
+        Command command = new AllLightCommand(lightHandlers);
 
         // Invoker object that decouple the invoker and actual command
         Switch lightSwitch = new Switch();
@@ -21,5 +29,7 @@ public class CommandClient {
         lightSwitch.storeAndExecute(command);
         lightSwitch.storeAndExecute(command);
 
+
+        Command allLightCommand = new AllLightCommand(lightHandlers);
     }
 }
