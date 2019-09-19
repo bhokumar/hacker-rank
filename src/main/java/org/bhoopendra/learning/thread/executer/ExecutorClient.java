@@ -48,6 +48,11 @@ public class ExecutorClient {
 		blockingQueue.put(runnable5);
 
 	ExecutorService executorService = new ThreadPoolExecutor(5, 10, 0L, TimeUnit.MILLISECONDS, blockingQueue);
+		executorService.execute(runnable1);
+		executorService.execute(runnable2);
+		executorService.execute(runnable3);
+		executorService.execute(runnable4);
+		executorService.execute(runnable5);
 	executorService.shutdown();
 	}
 }

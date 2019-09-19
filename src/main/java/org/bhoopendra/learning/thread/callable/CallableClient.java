@@ -23,5 +23,6 @@ public class CallableClient {
        LOGGER.info(result1.getMessage());
        LOGGER.info(String.valueOf(result1.getCode()));
        executorService.shutdown();
+
     }
 }

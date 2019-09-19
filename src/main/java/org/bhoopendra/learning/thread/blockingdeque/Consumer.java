@@ -8,7 +8,6 @@ public class Consumer implements Runnable{
 	BlockingDeque<Integer> blockingDeque= null;
 	public Consumer(BlockingDeque<Integer> blockingDeque) {
 		this.blockingDeque = blockingDeque;
-		new HashMap<>();
 	}
 	@Override
 	public void run() {
